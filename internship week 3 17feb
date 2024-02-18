@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    clear: both;
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+main h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Product Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#product-info">Product Information</a></li>
+                <li><a href="#product-image">Product Image</a></li>
+                <li><a href="#cta">Call-to-Action</a></li>
+                <li><a href="#navigation">Navigation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-info">
+            <h2>Product Information</h2>
+            <p>This is some information about the product.</p>
+        </section>
+        <section id="product-image">
+            <h2>Product Image</h2>
+            <img src="product.jpg" alt="Product Image">
+        </section>
+        <section id="cta">
+            <h2>Call-to-Action</h2>
+            <button>Add to Cart</button>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 E-commerce</p>
+    </footer>
+</body>
+</html>
+
+@media screen and (max-width: 600px) {
+    nav {
+        float: none;
+    }
+}                                                                                                                                    
