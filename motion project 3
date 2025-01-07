@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-add-to-cart {
+            background-color: #ff6f61;
+            color: #fff;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: #e85c50;
+            transform: scale(1.1);
+        }
+
+        .related-products img {
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .related-products img:hover {
+            transform: scale(1.1);
+        }
+
+        .reviews {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating {
+            color: #ffc107;
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #ff6f61;
+        }
+
+        .navbar-brand:hover {
+            color: #e85c50;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ddd;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #ff6f61;
+        }
+
+        .carousel-item img {
+            border-radius: 8px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #343a40;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .related-products .product-card {
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-products .product-card:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ShopMate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container my-5">
+        <h2 class="section-title">Product Details</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="product-image1.jpg" class="d-block w-100" alt="Product Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="product-image2.jpg" class="d-block w-100" alt="Product Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="product-image3.jpg" class="d-block w-100" alt="Product Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Product Name</h2>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae varius dui, a
+                    feugiat elit.</p>
+                <h4 class="text-primary">$99.99</h4>
+                <button class="btn btn-add-to-cart w-100 mt-3"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="container reviews my-5">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="mb-3">
+            <p><span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span> - "Great product! Highly recommend."</p>
+        </div>
+        <div class="mb-3">
+            <p><span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span> - "Excellent quality and fast delivery."</p>
+        </div>
+        <div class="mb-3">
+            <p><span class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</span> - "Good product but packaging could be better."</p>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="container related-products my-5">
+        <h2 class="section-title">Related Products</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="related1.jpg" alt="Related Product 1" class="img-fluid">
+                    <p class="mt-2">Product 1</p>
+                    <p class="text-primary">$49.99</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="related2.jpg" alt="Related Product 2" class="img-fluid">
+                    <p class="mt-2">Product 2</p>
+                    <p
